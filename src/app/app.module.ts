@@ -11,6 +11,7 @@ import { HeroPageComponent } from './heroes/pages/hero-page/hero-page.component'
 import { ListPageComponent } from './heroes/pages/list-page/list-page.component';
 import { NewPageComponent } from './heroes/pages/new-page/new-page.component';
 import { SearchPageComponent } from './heroes/pages/search-page/search-page.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchPageComponent } from './heroes/pages/search-page/search-page.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
