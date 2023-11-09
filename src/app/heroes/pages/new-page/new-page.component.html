@@ -1,5 +1,5 @@
-<h1>Editar / Agregar Héroe
-  <small>Superman</small>
+<h1>{{ currentHero.id?'Editar':'Agregar'}} a
+  <small>{{currentHero.superhero}}</small>
 
 </h1>
 
@@ -29,7 +29,7 @@
           <mat-form-field class="col sm:col-6">
             <mat-label>Creador</mat-label>
             <mat-select required formControlName="publisher">
-              <mat-option *ngFor="let publisher of publishers"  [value]="publisher.id">{{publisher.desc}}</mat-option>
+              <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">{{publisher.desc}}</mat-option>
             </mat-select>
 
           </mat-form-field>
@@ -48,7 +48,7 @@
             Guardar
           </button>
 
-          <button mat-flat-button color="primary">
+          <button mat-flat-button color="primary" *ngIf="currentHero.id">
             <mat-icon>delete</mat-icon>
             Borrar
           </button>
