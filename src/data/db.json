@@ -21,7 +21,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
+      "characters": "Kal-El",
+      "alt_img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781401275280.jpg&f=1&nofb=1&ipt=5b7b0be9035417ff0e9036422a730e2888495f76a6422d42a3545416461f6120&ipo=images"
     },
     {
       "id": "dc-flash",
@@ -37,7 +38,8 @@
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
       "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
+      "alt_img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp5612739.jpg&f=1&nofb=1&ipt=a500869512d4e2a7c8bd5330431db377e315cc9a158349c98c8cccb7bb63f925&ipo=images"
     },
     {
       "id": "dc-arrow",
