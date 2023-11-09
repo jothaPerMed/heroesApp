@@ -48,7 +48,7 @@
             Guardar
           </button>
 
-          <button mat-flat-button color="primary" *ngIf="currentHero.id">
+          <button mat-flat-button color="primary" *ngIf="currentHero.id" (click)="onConfirmDeleteHero()">
             <mat-icon>delete</mat-icon>
             Borrar
           </button>

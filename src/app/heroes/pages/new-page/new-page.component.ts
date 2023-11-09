@@ -5,6 +5,9 @@ import { HerosService } from '../../services/heros.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Dialog } from '@angular/cdk/dialog';
+import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-new-page',
@@ -28,7 +31,8 @@ export class NewPageComponent implements OnInit {
   constructor(private herosService: HerosService,
     private activatedRouter: ActivatedRoute,
     private router: Router,
-    private snackBar: MatSnackBar) {
+    private snackBar: MatSnackBar,
+    private dialog : MatDialog) {
 
   }
   ngOnInit(): void {
@@ -89,8 +93,19 @@ export class NewPageComponent implements OnInit {
 
   showSnackBar(message: string): void {
     this.snackBar.open(message, 'done', {
-      duration: 2500
+      duration: 300
     })
+  }
+
+  // Confirmacion de eliminacion
+  onConfirmDeleteHero(){
+    if(!this.currentHero.id) throw Error("El id no existe")
+    const dialogRef = this.dialog.open(ConfirmDialogComponent,{data:this.heroForm.value
+  })
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 
