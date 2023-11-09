@@ -23,4 +23,10 @@ export class HerosService {
       catchError(error=>of (undefined))//se regresa un undefined en el caso que no exista
     )
   }
+
+  //Autocompletado
+
+  getSuggestions(query:string):Observable<Hero[]>{
+    return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&limit=6`);
+  }
 }
